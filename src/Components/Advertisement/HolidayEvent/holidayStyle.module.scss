@@ -1,0 +1,21 @@
+.grid_holiday{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    .title{
+        grid-column-start: span 2;
+    }
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,785 @@
+{
+  "products": [
+    {
+      "_id": "6688ce8fdd370653611aabcd",
+      "id": "product471",
+      "name": "卡比兽亲子图案地毯",
+      "authorId": "00000002",
+      "authorName": "borther Rugs",
+      "status": "normal",
+      "shortIntroduction": "这是一款可爱的卡比兽和宝宝图案地毯，适合儿童房和游戏区使用哦",
+      "description": "这款卡比兽亲子图案地毯不仅适合放在儿童房、游戏区，还可以放在客厅增添童趣。柔软的绒面纤维材质为孩子们提供了舒适的玩耍和休息空间，卡比兽和宝宝的设计让地毯更具吸引力。易于清洁的特性和防滑设计也增加了使用的安全性和便利性。",
+      "properties": [
+        {
+          "name": "尺寸",
+          "specs": "90cm x 120cm",
+          "_id": "6688ce8fdd370653611aabce"
+        },
+        {
+          "name": "材质",
+          "specs": "高质量绒面纤维",
+          "_id": "6688ce8fdd370653611aabcf"
+        },
+        {
+          "name": "颜色",
+          "specs": "卡比兽蓝",
+          "_id": "6688ce8fdd370653611aabd0"
+        },
+        {
+          "name": "厚度",
+          "specs": "约1.5cm",
+          "_id": "6688ce8fdd370653611aabd1"
+        }
+      ],
+      "includes": [
+        "卡比兽亲子图案地毯",
+        "防滑垫"
+      ],
+      "keypoints": [
+        "卡比兽和宝宝的可爱设计，增加房间趣味性",
+        "柔软舒适的触感，适合孩子玩耍",
+        "高质量材质，耐用且易清洁",
+        "防滑底设计，确保安全使用",
+        "多种尺寸选择，适合不同房间需求"
+      ],
+      "price": 20.99,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-06T04:56:47.034Z",
+      "view": 56,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "/src/Assets/product/kabi1.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "6688d768dd17a6377e10d67a",
+          "name": "carpet",
+          "description": "Amazing Carpet design"
+        }
+      ],
+      "options": [
+        {
+          "question": "尺寸",
+          "isNecessary": true,
+          "value": [
+            {
+              "name": "30cm",
+              "price": 0,
+              "_id": "6688ce8fdd370653611aabd3"
+            },
+            {
+              "name": "45cm",
+              "price": 0,
+              "_id": "6688ce8fdd370653611aabd4"
+            },
+            {
+              "name": "60cm",
+              "price": 0,
+              "_id": "6688ce8fdd370653611aabd5"
+            }
+          ],
+          "_id": "6688ce8fdd370653611aabd2"
+        }
+      ],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/bortherRugs.jpg"
+    },
+    {
+      "_id": "6688d286dd370653611aabf3",
+      "id": "product322",
+      "name": "我的世界蜜蜂图案地毯",
+      "authorId": "00000002",
+      "authorName": "borther Rugs",
+      "status": "normal",
+      "shortIntroduction": "这是一款以《我的世界》游戏中的蜜蜂为主题的地毯",
+      "description": "这款《我的世界》蜜蜂图案地毯，不仅适合放在儿童房、游戏区，还可以放在客厅增添趣味。柔软的绒面纤维材质为孩子们提供了舒适的玩耍和休息空间，独特的蜜蜂设计让地毯更具吸引力。易于清洁的特性和防滑设计也增加了使用的安全性和便利性。",
+      "properties": [
+        {
+          "name": "材质",
+          "specs": "高质量绒面纤维",
+          "_id": "6688d286dd370653611aabf4"
+        },
+        {
+          "name": "颜色",
+          "specs": "黄色、黑色、棕色和白色",
+          "_id": "6688d286dd370653611aabf5"
+        },
+        {
+          "name": "厚度",
+          "specs": "1.5cm",
+          "_id": "6688d286dd370653611aabf6"
+        }
+      ],
+      "includes": [
+        "我的世界蜜蜂图案地毯",
+        "防滑垫"
+      ],
+      "keypoints": [
+        "独特的《我的世界》蜜蜂设计，增加房间趣味性",
+        "柔软舒适的触感，适合孩子玩耍",
+        "高质量材质，耐用且易清洁",
+        "防滑底设计，确保安全使用"
+      ],
+      "price": 25.99,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-06T05:13:42.889Z",
+      "view": 58,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "/src/Assets/product/bee1.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "6688d768dd17a6377e10d67a",
+          "name": "carpet",
+          "description": "Amazing Carpet design"
+        }
+      ],
+      "options": [
+        {
+          "question": "尺寸",
+          "isNecessary": false,
+          "value": [
+            {
+              "name": "80cm x 100cm",
+              "price": 0,
+              "_id": "6688d286dd370653611aabf8"
+            },
+            {
+              "name": "100cm x 140cm",
+              "price": 0,
+              "_id": "6688d286dd370653611aabf9"
+            }
+          ],
+          "_id": "6688d286dd370653611aabf7"
+        }
+      ],
+      "comments": [
+        {
+          "userId": "66897c69bb8282b5eccca1bd",
+          "userName": "清风徐来",
+          "avatar": "/src/Assets/avatar/sss3.jpg",
+          "content": "想要呢",
+          "replyFor": null,
+          "parentId": null,
+          "comments": [],
+          "_id": "6689c83974c45830a5c3af62",
+          "postDate": "2024-07-06T22:42:01.761Z"
+        }
+      ],
+      "__v": 1,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/bortherRugs.jpg"
+    },
+    {
+      "_id": "6688d814bb8282b5eccca189",
+      "id": "product323",
+      "name": "minecraft苦力怕图案地毯",
+      "authorId": "00000002",
+      "authorName": "borther Rugs",
+      "status": "normal",
+      "shortIntroduction": "这是一款以《我的世界》游戏中的苦力怕为主题的地毯",
+      "description": "这款《我的世界》苦力怕图案地毯，不仅适合放在儿童房、游戏区，还可以放在客厅增添趣味。柔软的绒面纤维材质为孩子们提供了舒适的玩耍和休息空间，独特的苦力怕设计让地毯更具吸引力。易于清洁的特性和防滑设计也增加了使用的安全性和便利性。",
+      "properties": [
+        {
+          "name": "厚度",
+          "specs": "1.5cm",
+          "_id": "6688d814bb8282b5eccca18a"
+        }
+      ],
+      "includes": [
+        "苦力怕图案地毯",
+        "防滑垫"
+      ],
+      "keypoints": [
+        "独特的《我的世界》苦力怕设计，增加房间趣味性",
+        "柔软舒适的触感，适合孩子玩耍",
+        "高质量材质，耐用且易清洁",
+        "防滑底设计，确保安全使用",
+        "多种尺寸选择，适合不同房间需求"
+      ],
+      "price": 23.99,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-06T05:37:24.075Z",
+      "view": 23,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "/src/Assets/product/crepper1.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "6688d768dd17a6377e10d67b",
+          "name": "minecraft",
+          "description": "Amazing Carpet design"
+        },
+        {
+          "_id": "6688d768dd17a6377e10d67a",
+          "name": "carpet",
+          "description": "Amazing Carpet design"
+        }
+      ],
+      "options": [
+        {
+          "question": "尺寸",
+          "isNecessary": true,
+          "value": [
+            {
+              "name": "80cm x 100cm",
+              "price": 0,
+              "_id": "6688d814bb8282b5eccca18c"
+            },
+            {
+              "name": "100cm x 140cm",
+              "price": 4,
+              "_id": "6688d814bb8282b5eccca18d"
+            }
+          ],
+          "_id": "6688d814bb8282b5eccca18b"
+        }
+      ],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/bortherRugs.jpg"
+    },
+    {
+      "_id": "66898e5974c45830a5c3af26",
+      "id": "product274",
+      "name": "萌鸭书桌支撑小伙伴",
+      "authorId": "00000003",
+      "authorName": "清风徐来",
+      "status": "normal",
+      "shortIntroduction": "这对超萌鸭子书架支撑架将为你的书桌带来无限的欢乐和活力！",
+      "description": "这对萌鸭书桌支撑小伙伴不仅仅是书架支撑架，更是你的桌面好伙伴！它们圆滚滚的身形和憨态可掬的表情，让你在工作学习之余，感受到满满的治愈力。高质量的材质让它们可以长久陪伴你，而防滑设计则保证了它们的稳固性。无论是放在儿童房、办公室还是客厅，它们都会成为一道亮丽的风景线，让你的空间充满温馨和欢乐！",
+      "properties": [
+        {
+          "name": "材料",
+          "specs": "石膏",
+          "_id": "66898e5974c45830a5c3af27"
+        },
+        {
+          "name": "尺寸",
+          "specs": "15cm x 10cm x 18cm/ 一只鸭",
+          "_id": "66898e5974c45830a5c3af28"
+        },
+        {
+          "name": "重量",
+          "specs": "0.5kg",
+          "_id": "66898e5974c45830a5c3af29"
+        }
+      ],
+      "includes": [
+        "一对超级可爱的鸭子书架支撑架"
+      ],
+      "keypoints": [
+        "超萌的鸭子造型，让你的书桌瞬间变得活泼有趣",
+        "高质量塑料材质，坚固耐用，易于清洁",
+        "防滑底设计，确保书本不会轻易倒塌",
+        "适合整理各种书本、漫画和杂志"
+      ],
+      "price": 17,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-06T18:35:05.284Z",
+      "view": 16,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "/src/Assets/product/desk_decorations_bookshelf_duck3.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "6688d768dd17a6377e10d676",
+          "name": "boookends",
+          "description": "bookends design"
+        }
+      ],
+      "options": [],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/sss3.jpg"
+    },
+    {
+      "_id": "6689904074c45830a5c3af3a",
+      "id": "product15",
+      "name": "星空鲸鱼水晶球灯",
+      "authorId": "00000003",
+      "authorName": "清风徐来",
+      "status": "normal",
+      "shortIntroduction": "这款美丽的星空鲸鱼水晶球灯，将梦幻的星空与宁静的鲸鱼结合，为你的空间增添一丝浪漫与神秘。",
+      "description": "这款星空鲸鱼水晶球灯，不仅是一件独特的装饰品，更是一盏实用的夜灯。鲸鱼在星空中游弋的设计，带来宁静与美好的氛围，适合摆放在卧室、客厅或书桌上。内置的 LED 灯提供柔和的照明，让你在夜晚享受温暖的灯光。高品质的水晶材质和精美的工艺，确保了这款水晶球的持久耐用。无论是送给自己还是亲友，都是一份极具意义的礼物！",
+      "properties": [
+        {
+          "name": "尺寸",
+          "specs": "10厘米",
+          "_id": "6689904074c45830a5c3af3b"
+        },
+        {
+          "name": "材质",
+          "specs": "玻璃水晶，木质底座",
+          "_id": "6689904074c45830a5c3af3c"
+        },
+        {
+          "name": "灯光",
+          "specs": "暖灯",
+          "_id": "6689904074c45830a5c3af3d"
+        }
+      ],
+      "includes": [
+        "星空鲸鱼水晶球",
+        "带灯底座",
+        "USB 充电线",
+        "USB 插头"
+      ],
+      "keypoints": [
+        "精美的鲸鱼和星空设计，打造梦幻般的视觉效果",
+        "内置 LED 灯，提供柔和的照明，适合夜灯使用",
+        "高品质水晶材质，清晰透明，无气泡",
+        "底座设计简约，易于搭配各种家居风格",
+        "USB 充电，环保便捷"
+      ],
+      "price": 11.5,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-06T18:43:12.119Z",
+      "view": 12,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product15/desk_decorations_krystal_ball3.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product15/desk_decorations_krystal_ball2.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product15/desk_decorations_krystal_ball1.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "6688d768dd17a6377e10d676",
+          "name": "boookends",
+          "description": "bookends design"
+        }
+      ],
+      "options": [
+        {
+          "question": "底座颜色",
+          "isNecessary": false,
+          "value": [
+            {
+              "name": "原木色",
+              "price": 0,
+              "_id": "6689904074c45830a5c3af3f"
+            },
+            {
+              "name": "白色",
+              "price": 0,
+              "_id": "6689904074c45830a5c3af40"
+            },
+            {
+              "name": "黑色",
+              "price": 0,
+              "_id": "6689904074c45830a5c3af41"
+            }
+          ],
+          "_id": "6689904074c45830a5c3af3e"
+        }
+      ],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/sss3.jpg"
+    },
+    {
+      "_id": "669027a22e35278d7150c9f4",
+      "id": "product196",
+      "name": "萌趣小熊冰箱贴",
+      "authorId": "00000003",
+      "authorName": "清风徐来",
+      "status": "normal",
+      "shortIntroduction": "这款超可爱的小熊冰箱贴，将为你的冰箱增添一份萌趣和活力！",
+      "description": "这款萌趣小熊冰箱贴不仅是一件实用的小工具，更是一件可爱的装饰品。它采用高品质软陶手工制作，色彩鲜艳，手感细腻。小熊憨态可掬的表情和姿态，让人一见倾心。背面的强力磁铁确保它能稳固吸附在冰箱、白板或其他磁性表面，不易滑落。无论是用来固定购物清单、照片，还是纯粹作为装饰，这款小熊冰箱贴都能为你的生活增添一份乐趣和温馨。是送给朋友、家人或自己的绝佳礼物！",
+      "properties": [
+        {
+          "name": "尺寸",
+          "specs": "6cm x 4cm x 2cm",
+          "_id": "669027a22e35278d7150c9f5"
+        },
+        {
+          "name": "材质",
+          "specs": "高品质软陶和磁铁",
+          "_id": "669027a22e35278d7150c9f6"
+        },
+        {
+          "name": "颜色",
+          "specs": "粉色主体，白色肚皮",
+          "_id": "669027a22e35278d7150c9f7"
+        }
+      ],
+      "includes": [
+        "一只粉色小熊造型冰箱贴"
+      ],
+      "keypoints": [
+        "可爱的粉色小熊设计，表情萌趣，手舞足蹈",
+        "高品质软陶材质，手感细腻，色彩鲜艳",
+        "强力磁铁背面，确保稳固吸附在冰箱或磁性表面",
+        "适用于冰箱、白板、办公桌等多种场合"
+      ],
+      "price": 9.9,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-11T18:42:42.977Z",
+      "view": 3,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product196/pic.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "66902708e16e1a46edb005bf",
+          "name": "Fridge Magnet",
+          "description": "This is Fridge Magnet Design"
+        }
+      ],
+      "options": [],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/sss3.jpg"
+    },
+    {
+      "_id": "66902abac763c10d635bfff0",
+      "id": "product147",
+      "name": "可莉手办黏土人",
+      "authorId": "00000003",
+      "authorName": "清风徐来",
+      "status": "normal",
+      "shortIntroduction": "这款可爱的可莉手办黏土人，将为你的收藏增添一份元气满满的二次元魅力！",
+      "description": "这款可莉手办黏土人，不仅是二次元爱好者的收藏佳品，更是展示你独特品味的绝佳选择。可莉的可爱形象和精美涂装，生动地再现了角色的活泼与魅力。多种表情替换件和小配件，提供了更多的展示可能性，让你在不同场合都能展现出可莉的独特魅力。无论是作为摆设还是收藏，这款可莉手办黏土人都将是你最值得珍藏的一份礼物！",
+      "properties": [
+        {
+          "name": "尺寸",
+          "specs": "10cm",
+          "_id": "66902abac763c10d635bfff1"
+        },
+        {
+          "name": "材质",
+          "specs": "高品质黏土",
+          "_id": "66902abac763c10d635bfff2"
+        }
+      ],
+      "includes": [
+        "可莉手办黏土人模型"
+      ],
+      "keypoints": [
+        "精美的可莉设计，细节逼真，神态可爱",
+        "高品质黏土材质，手感细腻，色彩鲜艳",
+        "多种表情替换件和配件，增加玩赏乐趣",
+        "适合摆放在书桌、展示柜等多种场合"
+      ],
+      "price": 11,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-11T18:55:54.758Z",
+      "view": 0,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product147/keli.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "66898f7add17a6377e10d685",
+          "name": "decoration",
+          "description": "Decoration in everywhere"
+        }
+      ],
+      "options": [],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/sss3.jpg"
+    },
+    {
+      "_id": "66902bd6c763c10d635c0027",
+      "id": "product268",
+      "name": "累了，勿扰",
+      "authorId": "00000003",
+      "authorName": "清风徐来",
+      "status": "normal",
+      "shortIntroduction": "适合如今都市人群，累了就把它贴在冰箱上面",
+      "description": "这款萌趣小熊摆件以其疲惫的模样，生动地展现了我们每个人都能感同身受的疲惫感。它采用高品质的软陶和树脂材料制作，色彩鲜艳，手感细腻。无论是放在书桌上、床头柜还是办公室，它都能为你的生活增添一份幽默和温馨。不同姿态和表情的小熊款式，满足你的各种喜好，是送给朋友、家人或自己的绝佳礼物。",
+      "properties": [
+        {
+          "name": "尺寸",
+          "specs": "8cm x 6cm x 5cm",
+          "_id": "66902bd6c763c10d635c0028"
+        },
+        {
+          "name": "材料",
+          "specs": "高品质软陶和树脂",
+          "_id": "66902bd6c763c10d635c0029"
+        }
+      ],
+      "includes": [
+        "冰箱贴一份"
+      ],
+      "keypoints": [
+        "可爱的疲惫小熊设计，表情生动有趣",
+        "适用于书桌、床头、办公室等多个场景"
+      ],
+      "price": 11.99,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-11T19:00:38.178Z",
+      "view": 6,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product268/pic5.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "66902708e16e1a46edb005bf",
+          "name": "Fridge Magnet",
+          "description": "This is Fridge Magnet Design"
+        }
+      ],
+      "options": [],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/sss3.jpg"
+    },
+    {
+      "_id": "66902d4dc763c10d635c0042",
+      "id": "product389",
+      "name": "申鹤手办黏土冰箱贴",
+      "authorId": "00000003",
+      "authorName": "清风徐来",
+      "status": "normal",
+      "shortIntroduction": "这款可爱的申鹤手办黏土人，将游戏角色完美再现，为你的收藏增添一份二次元的魅力！",
+      "description": "这款申鹤手办黏土人，不仅是二次元爱好者的收藏佳品，更是展示你独特品味的绝佳选择。申鹤的精美形象和细腻涂装，生动地再现了角色的优雅与魅力。多种表情替换件和小配件，提供了更多的展示可能性，让你在不同场合都能展现出申鹤的独特魅力。无论是作为摆设还是收藏，这款申鹤手办黏土人都将是你最值得珍藏的一份礼物！",
+      "includes": [
+        "申鹤手办黏土冰箱贴"
+      ],
+      "keypoints": [
+        "精美的申鹤设计，细节逼真，神态可爱",
+        "高品质黏土材质，手感细腻，色彩鲜艳",
+        "多种表情替换件和配件，增加玩赏乐趣"
+      ],
+      "price": 8.99,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-11T19:06:53.432Z",
+      "view": 0,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product389/pick9.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product389/pick9.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "66902708e16e1a46edb005bf",
+          "name": "Fridge Magnet",
+          "description": "This is Fridge Magnet Design"
+        }
+      ],
+      "properties": [],
+      "options": [],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/sss3.jpg"
+    },
+    {
+      "_id": "66905191c763c10d635c03cf",
+      "id": "product4010",
+      "name": "萌趣鸭鸭冰箱贴套装",
+      "authorId": "00000003",
+      "authorName": "清风徐来",
+      "status": "normal",
+      "shortIntroduction": "这款萌趣鸭鸭冰箱贴套装为你的冰箱增添一份童趣和温馨，带来好心情每一天",
+      "description": "这款萌趣鸭鸭冰箱贴套装，不仅是一套实用的冰箱贴，更是一套充满创意和乐趣的装饰品。每个冰箱贴都采用高品质软陶手工制作，色彩鲜艳，手感细腻。鸭爸爸、鸭妈妈、小篮子、小树、向日葵、小太阳和彩虹，每一个角色都栩栩如生，为你的冰箱增添一份童趣和温馨。强力磁铁确保它们可以稳固吸附在冰箱、白板或其他磁性表面，不易滑落。无论是用于固定购物清单、照片，还是纯粹作为装饰，这款冰箱贴套装都能为你的生活增添一份欢乐和温暖。是送给朋友、家人或自己的绝佳礼物！",
+      "properties": [
+        {
+          "name": "每个冰箱贴",
+          "specs": "5cm - 7cm",
+          "_id": "66905191c763c10d635c03d0"
+        },
+        {
+          "name": "材质",
+          "specs": "软陶和磁铁",
+          "_id": "66905191c763c10d635c03d1"
+        }
+      ],
+      "includes": [
+        "鸭爸爸冰箱贴",
+        "鸭妈妈冰箱贴",
+        "小篮子冰箱贴",
+        "小树冰箱贴",
+        "向日葵冰箱贴",
+        "小太阳冰箱贴",
+        "彩虹冰箱贴"
+      ],
+      "keypoints": [
+        "可爱的鸭鸭家族设计，充满童趣和温馨",
+        "高品质软陶材质，手感细腻，色彩鲜艳",
+        "强力磁铁背面，确保稳固吸附在冰箱或磁性表面",
+        "适用于冰箱、白板、办公桌等多种场合",
+        "多种造型和颜色选择，满足不同喜好"
+      ],
+      "price": 15,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-11T21:41:37.357Z",
+      "view": 0,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "https://storage.googleapis.com/wakuwaku-images/products/qingfeng/product4010/refrigeratorSticker2.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "66898f7add17a6377e10d685",
+          "name": "decoration",
+          "description": "Decoration in everywhere"
+        },
+        {
+          "_id": "66902708e16e1a46edb005bf",
+          "name": "Fridge Magnet",
+          "description": "This is Fridge Magnet Design"
+        }
+      ],
+      "options": [],
+      "comments": [],
+      "__v": 0,
+      "authorAvatar": "https://storage.googleapis.com/wakuwaku-images/avatar/sss3.jpg"
+    },
+    {
+      "_id": "66912f33f70043b4c523476e",
+      "id": "product3011",
+      "name": "泡泡玛特奶油胶手机壳",
+      "authorId": "66912b33f70043b4c523475e",
+      "authorName": "Rainie",
+      "authorAvatar": "/src/Assets/avatar/rainie.jpg",
+      "status": "normal",
+      "shortIntroduction": "这款泡泡玛特奶油胶手机壳，结合了精美的装饰与实用性，为你的手机增添独特的个性",
+      "description": "这款泡泡玛特奶油胶手机壳，不仅是一款手机保护壳，更是一件艺术品。它采用高品质的塑料和奶油胶材料，精心制作，装饰元素细节丰富，为你的手机增添独特的个性。无论是霍格沃茨主题还是其他可爱风格，都能满足你的多样化需求。这款手机壳不仅可以有效保护手机免受划痕和碰撞，还能展示你的时尚品味。适用于多种手机型号，确保其安装和拆卸的便捷性，是送给朋友和家人或犒劳自己的完美礼物",
+      "properties": [
+        {
+          "name": "尺寸",
+          "specs": "适用于多种手机型号",
+          "_id": "66912f33f70043b4c523476f"
+        }
+      ],
+      "includes": [
+        "泡泡玛特奶油胶手机壳"
+      ],
+      "keypoints": [
+        "独特的泡泡玛特奶油胶设计，造型精美",
+        "细节丰富，精致的装饰元素",
+        "美美哒"
+      ],
+      "price": 23.99,
+      "discount": 0,
+      "stock": 0,
+      "postDate": "2024-07-12T13:27:15.312Z",
+      "view": 14,
+      "likes": 0,
+      "rate": 0,
+      "image": [
+        "https://storage.googleapis.com/wakuwaku-images/products/rainie/product3011/rainie2.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/rainie/product3011/rainie10.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/rainie/product3011/rainie14.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/rainie/product3011/rainie15.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/rainie/product3011/rainie16.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/rainie/product3011/rainie17.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/rainie/product3011/rainie20.jpg",
+        "https://storage.googleapis.com/wakuwaku-images/products/rainie/product3011/rainie3.jpg"
+      ],
+      "tag": [
+        {
+          "_id": "6688d768dd17a6377e10d677",
+          "name": "phone case",
+          "description": "Phone design"
+        }
+      ],
+      "options": [
+        {
+          "question": "风格",
+          "isNecessary": false,
+          "value": [
+            {
+              "name": "蜡笔小新",
+              "price": 0,
+              "_id": "66912f33f70043b4c5234771"
+            },
+            {
+              "name": "蓝色梦幻",
+              "price": 5,
+              "_id": "66912f33f70043b4c5234772"
+            }
+          ],
+          "_id": "66912f33f70043b4c5234770"
+        },
+        {
+          "question": "手机型号",
+          "isNecessary": true,
+          "value": [
+            {
+              "name": "iphone12",
+              "price": 0,
+              "_id": "66912f33f70043b4c5234774"
+            },
+            {
+              "name": "iphone12 pro",
+              "price": 0,
+              "_id": "66912f33f70043b4c5234775"
+            },
+            {
+              "name": "iphone12 pro max",
+              "price": 0,
+              "_id": "66912f33f70043b4c5234776"
+            },
+            {
+              "name": "iphone13",
+              "price": 0,
+              "_id": "66912f33f70043b4c5234777"
+            },
+            {
+              "name": "iphone13 pro",
+              "price": 0,
+              "_id": "66912f33f70043b4c5234778"
+            },
+            {
+              "name": "iphone13 pro max",
+              "price": 0,
+              "_id": "66912f33f70043b4c5234779"
+            },
+            {
+              "name": "iphone14",
+              "price": 0,
+              "_id": "66912f33f70043b4c523477a"
+            },
+            {
+              "name": "iphone14 pro",
+              "price": 0,
+              "_id": "66912f33f70043b4c523477b"
+            },
+            {
+              "name": "iphone14 pro max",
+              "price": 0,
+              "_id": "66912f33f70043b4c523477c"
+            }
+          ],
+          "_id": "66912f33f70043b4c5234773"
+        }
+      ],
+      "comments": [],
+      "__v": 0
+    }
+  ],
+  "ad": {
+    "id": 1,
+    "size": "full"
+  }
+}
