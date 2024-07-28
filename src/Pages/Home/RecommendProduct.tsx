@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 //styles
 import { pageSetting } from "../../style";
@@ -52,7 +52,7 @@ type categoryType = {
 
 type Ad = {
     id: string;
-    size: 'one' | 'two' | 'full';
+    size: 'one' | 'two' | 'full' | 'three'; 
     component: React.FC<{ key: string }>;
 }
 
@@ -68,12 +68,15 @@ const categories = [
 const Advertisements: Ad[] = [
     {id: '1', size: "two",component: ({ key }) => <Advertisement key={key} size='two' image={christmasDiscount} />},
     {id: '2', size: "full",component: ({ key }) => <Advertisement key={key} size='full' image={christmasDiscount} />},
+    {id: '3', size: "three",component: ({ key }) => <Advertisement key={key} size='three' image={christmasDiscount} />},
 ]
 
 const RecommendProduct = () => {
 
     //接受的产品数据
     const [products, setProducts] = useState<Product[]>([]); 
+    // ads
+    const [ads, setAds] = useState<Ad[]>([]);
     //目录
     const [ category, setCategory ] = useState<categoryType>(categories[0]);
     //loading
@@ -86,6 +89,8 @@ const RecommendProduct = () => {
     const [page, setPage] = useState(1);
     //用户收藏
     const favorites = useSelector((state: RootState) => state.profile.profile?.favorites) || [];
+    const isLoadingMoreRef = useRef(false);
+
 
     const handleCategory = (type: categoryType) => {
         setCategory(type);
@@ -95,7 +100,12 @@ const RecommendProduct = () => {
     const fetchProducts = async () => {
         try{
             const { products: recommendedProducts } = await getRecommendProductsWithAd(category.value,page);
-            setProducts(recommendedProducts);
+            const randomAd: Ad = Object.assign((Math.random() > 0.5 ? Advertisements[1] : Math.random() > 0.5 ? Advertisements[0] : Advertisements[2]), { id: Math.random().toString() });
+            setProducts((data) => [...data, ...recommendedProducts]);
+            // setAds(() => [...ads, ad]);
+            setAds((data) => {
+                return [...data, randomAd]
+            });
         }catch(error){
             console.error(error);
         }
@@ -107,82 +117,59 @@ const RecommendProduct = () => {
     }
 
     const combineItems = () => {
-        // 过滤产品
-        const filterProducts = (products: Product[], category: categoryType) => {
-            if (category.value === 'all') {
-                return products;
-            }
-            return products.filter(product => product.tag[0].name === category.value);
-        };
-    
         // 获取当前列数
         const gridContainer = document.querySelector('.gridDIY');
         if (!gridContainer) return;
         const gridColumns = window.getComputedStyle(gridContainer).gridTemplateColumns.split(' ').length;
     
         // 广告信息
-        const ads = Advertisements;
-        const adSizes = { one: 1, two: 2, full: gridColumns }; // 广告大小对应的网格列数
-    
-        let adInserted = false; // 广告是否已插入
-    
-        // 过滤产品
-        const filteredProducts = filterProducts(products, category);
-    
-        const combinedItems: (Product | Ad)[] = [];
-        let currentRowItems = 0; // 当前行的项目数
-    
-        filteredProducts.forEach((product, index) => {
-            const nextProduct = filteredProducts[index + 1];
-    
-            // 检查是否可以插入广告
-            if (!adInserted) {
-                //如果产品少于2排，就不插入广告了
-                if (filteredProducts.length < 2) {
-                    adInserted = true;
-                }
+        // const ads = Advertisements;
+        const combinedItems2: (Product | Ad)[] = [];
+        const allAds: Ad[] = [...ads];
+        let nextAdIndex = 0;
+        let usedCols = 0;
 
-                const ad = ads[Math.floor(Math.random() * ads.length)];
-                const adSpan = adSizes[ad.size];
-    
-                // 判断是否可以插入广告
-                if (ad.size === 'full' || currentRowItems + adSpan > gridColumns) {
-                    if (currentRowItems > 0) {
-                        // 当前行已满或广告是全宽，插入广告
-                        combinedItems.push(ad);
-                        currentRowItems = 0; // 重新开始新行
-                        adInserted = true;
-                    } else {
-                        // 当前行为空，可以直接插入广告
-                        combinedItems.push(ad);
-                        currentRowItems = adSpan;
-                        adInserted = true;
+        // 遍历每一个产品，检查产品当前的行、当前行剩余的位置
+        // 如果产品每增加10、再找一下有没有广告、插入广告
+        for (let i = 0; i < products.length; i++) {
+            const index = i + usedCols
+            const rowIndex = parseInt((index / gridColumns) + '')
+            const rowRemainColumn = gridColumns - (index % gridColumns + 1);
+            combinedItems2.push(products[i]);
+            const nextAd = allAds[nextAdIndex];
+            const canInsertAd = parseInt(i / 10 + '') > nextAdIndex;
+            console.log('canInsertAd: ', rowIndex, rowRemainColumn, canInsertAd);
+            if (canInsertAd && nextAd) {
+                const isContinue = (nextAd.size === 'full' && rowRemainColumn !== 0) || (nextAd.size === 'two' && rowRemainColumn < 2) || (nextAd.size === 'three' && rowRemainColumn < 3);
+                const isEnd = i + 1 === products.length;
+                if (!isContinue || isEnd) {
+                    if (nextAd.size !== 'full') {
+                        const step = nextAd.size === 'two' ? 2 : nextAd.size === 'three' ? 3 : gridColumns;
+                        usedCols += step;
                     }
+                    combinedItems2.push(nextAd);
+                    nextAdIndex++;
                 }
             }
-    
-            // 添加当前产品
-            combinedItems.push(product);
-            currentRowItems++;
-    
-            // 如果当前行已满，重置当前行项目数
-            if (currentRowItems >= gridColumns) {
-                currentRowItems = 0;
-            }
-        });
-    
-        // 处理可能的剩余空间
-        if (!adInserted && filteredProducts.length > 0) {
-            const ad = ads[Math.floor(Math.random() * ads.length)];
-            combinedItems.push(ad);
         }
-        setItems(combinedItems);
+        console.log(combinedItems2)
+        
+        setItems(combinedItems2);
     };
     
 
     //当用户第一次进入页面时，加载推荐产品
     useEffect(() => {
-        fetchProducts();
+        fetchProducts()
+        .then(() => {
+            fetchProducts()
+                .then(() => {
+                    fetchProducts()
+                        .then(() => {
+                            fetchProducts()
+                        })
+                });
+            })
         fetchAd();
     }, [category, page]);
 
@@ -191,12 +178,45 @@ const RecommendProduct = () => {
         combineItems();
     }, [products]);
 
+    // 监听底部加载更多
+    useEffect(() => {
+        const allProducts = document.querySelectorAll('.product');
+        const lastProduct = allProducts[allProducts.length - 1];
+        const scrollHandler = async () => {
+            const offset = lastProduct.getBoundingClientRect(); // vue中，使用this.$el获取当前组件的根元素
+            const offsetTop = offset.top;
+            const offsetBottom = offset.bottom;
+            if (offsetTop <= window.innerHeight && offsetBottom >= 0) {
+                // 进入底部可视区域，进行加载
+                if (isLoadingMoreRef.current) return
+                try{
+                    isLoadingMoreRef.current = true;
+                    const { products: recommendedProducts, ad } = await getRecommendProductsWithAd(category.value,page);
+                    ad.id = Date.now();
+                    setProducts((data) => [...data, ...recommendedProducts]);
+                    setAds((data) => {
+                        return [...data, Math.random() > 0.5 ? Advertisements[0] : Advertisements[2]]
+                    });
+                } catch(error){
+                    console.error(error);
+                } finally {
+                    isLoadingMoreRef.current = false;
+                }
+            }
+        }
+        window.addEventListener('scroll', scrollHandler)
+        return () => {
+            window.removeEventListener('scroll', scrollHandler)
+        }
+    }, [items])
+
     //根据是产品还是广告来渲染
     const renderGridItem = (item: Product | Ad) => {
         
         // 渲染广告
         if ('component' in item) {
-            return item.component({ key: item.id.toString() as string });
+            // return item.component({ key: item.id.toString() as string });
+            return item.component({ key: Math.random().toString() });
         }
 
         // 渲染产品
@@ -205,7 +225,8 @@ const RecommendProduct = () => {
     
         // 渲染产品
         return (
-            <ProductCard key={item.id.toString()} product={item} isFavor={isFavorite} />
+            // <ProductCard key={item.id.toString()} product={item} isFavor={isFavorite} />
+            <ProductCard key={Math.random()} product={item} isFavor={isFavorite} />
         );
     };
     

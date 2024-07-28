@@ -16,7 +16,13 @@ const Advertisement: React.FC<AdvertisementProps> = ({ size = 'full',image }) =>
             );
         case 'two':
             return (
-                <div className="fullWidth flex justify-center items-center">
+                <div className="" style={{ gridColumn: "span 2" }}>
+                    <img src={image} alt="Christmas Discount" className="w-full h-full object-cover" />
+                </div>
+            );
+        case 'three':
+            return (
+                <div className="" style={{ gridColumn: "span 3" }}>
                     <img src={image} alt="Christmas Discount" className="w-full h-full object-cover" />
                 </div>
             );

@@ -24,7 +24,7 @@ import { AnimatePresence } from 'framer-motion'
 import './i18n/i18n';  // 导入 i18n 配置
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <SearchResultProvider>
         <AnimatePresence>
@@ -32,5 +32,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </AnimatePresence>
       </SearchResultProvider>
     </Provider>
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )

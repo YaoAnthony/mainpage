@@ -54,12 +54,16 @@ export const getRecommendProducts = async (category:string,page:number): Promise
 }
 
 export const getRecommendProductsWithAd = async (category: string, page: number) => {
-    const response = await axios.get(`${baseUrl}/public/recommend-products`, {
-        params: {
-            category,
-            page
-        }
-    });
+    try {
+        const response = await axios.get(`${baseUrl}/public/recommend-products`, {
+            params: {
+                category,
+                page
+            }
+        });
+    } catch (error) {
+        
+    }
     //get data from data.json
     return data;
 
