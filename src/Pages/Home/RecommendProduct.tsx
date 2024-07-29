@@ -227,7 +227,7 @@ const RecommendProduct = () => {
     return (
         <section 
             className={`relative w-full ${pageSetting.padding} flex flex-col gap-3`}>
-            <div className={`${pageSetting.padding} w-full mb-2`}>
+            <div className={`overflow-x-scroll md:overflow-x-auto ${pageSetting.padding} w-full mb-2`}>
                 <FilterBar category={category} categories={categories} handleCategory={handleCategory}  />
             </div>
             {
