@@ -93,6 +93,8 @@ const RecommendProduct = () => {
 
 
     const handleCategory = (type: categoryType) => {
+        setProducts([]);
+        setAds([]);
         setCategory(type);
     }
 
@@ -161,15 +163,6 @@ const RecommendProduct = () => {
     //当用户第一次进入页面时，加载推荐产品
     useEffect(() => {
         fetchProducts()
-        .then(() => {
-            fetchProducts()
-                .then(() => {
-                    fetchProducts()
-                        .then(() => {
-                            fetchProducts()
-                        })
-                });
-            })
         fetchAd();
     }, [category, page]);
 
