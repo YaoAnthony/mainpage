@@ -173,16 +173,20 @@ const RecommendProduct = () => {
 
     // 监听底部加载更多
     useEffect(() => {
+        if (!products.length) {
+            return
+        }
         const allProducts = document.querySelectorAll('.product');
         const lastProduct = allProducts[allProducts.length - 1];
         const scrollHandler = async () => {
+            if (isLoadingMoreRef.current) return
             const offset = lastProduct.getBoundingClientRect(); // vue中，使用this.$el获取当前组件的根元素
             const offsetTop = offset.top;
             const offsetBottom = offset.bottom;
             if (offsetTop <= window.innerHeight && offsetBottom >= 0) {
                 // 进入底部可视区域，进行加载
-                if (isLoadingMoreRef.current) return
                 try{
+                    console.log('loading more')
                     isLoadingMoreRef.current = true;
                     const { products: recommendedProducts, ad } = await getRecommendProductsWithAd(category.value,page);
                     ad.id = Date.now();
@@ -190,10 +194,12 @@ const RecommendProduct = () => {
                     setAds((data) => {
                         return [...data, Math.random() > 0.5 ? Advertisements[0] : Advertisements[2]]
                     });
+                    setTimeout(() => {
+                        isLoadingMoreRef.current = false;
+                    }, 1000)
                 } catch(error){
-                    console.error(error);
-                } finally {
                     isLoadingMoreRef.current = false;
+                    console.error(error);
                 }
             }
         }
