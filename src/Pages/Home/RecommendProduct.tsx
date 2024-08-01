@@ -29,10 +29,6 @@ import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { PiDesk } from "react-icons/pi";
 import { MdOutlineToys } from "react-icons/md";
 
-
-//antd
-import { Pagination } from "antd";
-
 //api
 import { getRecommendProductsWithAd } from '../../Api/getPublicDataApi';
 
@@ -102,6 +98,7 @@ const RecommendProduct = () => {
     const fetchProducts = async () => {
         try{
             const { products: recommendedProducts } = await getRecommendProductsWithAd(category.value,page);
+            setPage(page + 1);
             const randomAd: Ad = Object.assign((Math.random() > 0.5 ? Advertisements[1] : Math.random() > 0.5 ? Advertisements[0] : Advertisements[2]), { id: Math.random().toString() });
             setProducts((data) => [...data, ...recommendedProducts]);
             // setAds(() => [...ads, ad]);
@@ -135,12 +132,12 @@ const RecommendProduct = () => {
         // 如果产品每增加10、再找一下有没有广告、插入广告
         for (let i = 0; i < products.length; i++) {
             const index = i + usedCols
-            const rowIndex = parseInt((index / gridColumns) + '')
+            //const rowIndex = parseInt((index / gridColumns) + '')
             const rowRemainColumn = gridColumns - (index % gridColumns + 1);
             combinedItems2.push(products[i]);
             const nextAd = allAds[nextAdIndex];
             const canInsertAd = parseInt(i / 10 + '') > nextAdIndex;
-            console.log('canInsertAd: ', rowIndex, rowRemainColumn, canInsertAd);
+            //console.log('canInsertAd: ', rowIndex, rowRemainColumn, canInsertAd);
             if (canInsertAd && nextAd) {
                 const isContinue = (nextAd.size === 'full' && rowRemainColumn !== 0) || (nextAd.size === 'two' && rowRemainColumn < 2) || (nextAd.size === 'three' && rowRemainColumn < 3);
                 const isEnd = i + 1 === products.length;
@@ -154,7 +151,7 @@ const RecommendProduct = () => {
                 }
             }
         }
-        console.log(combinedItems2)
+        //console.log(combinedItems2)
         
         setItems(combinedItems2);
     };
@@ -162,9 +159,11 @@ const RecommendProduct = () => {
 
     //当用户第一次进入页面时，加载推荐产品
     useEffect(() => {
+        setPage(1);
+        setProducts([]);
         fetchProducts()
         fetchAd();
-    }, [category, page]);
+    }, [category]);
 
     // 监听products的变化并调用combineItems
     useEffect(() => {
@@ -173,27 +172,34 @@ const RecommendProduct = () => {
 
     // 监听底部加载更多
     useEffect(() => {
+        if (!products.length) {
+            return
+        }
         const allProducts = document.querySelectorAll('.product');
         const lastProduct = allProducts[allProducts.length - 1];
         const scrollHandler = async () => {
+            if (isLoadingMoreRef.current) return
             const offset = lastProduct.getBoundingClientRect(); // vue中，使用this.$el获取当前组件的根元素
             const offsetTop = offset.top;
             const offsetBottom = offset.bottom;
             if (offsetTop <= window.innerHeight && offsetBottom >= 0) {
                 // 进入底部可视区域，进行加载
-                if (isLoadingMoreRef.current) return
                 try{
+                    console.log('loading more')
                     isLoadingMoreRef.current = true;
                     const { products: recommendedProducts, ad } = await getRecommendProductsWithAd(category.value,page);
+                    setPage(page + 1);
                     ad.id = Date.now();
                     setProducts((data) => [...data, ...recommendedProducts]);
                     setAds((data) => {
                         return [...data, Math.random() > 0.5 ? Advertisements[0] : Advertisements[2]]
                     });
+                    setTimeout(() => {
+                        isLoadingMoreRef.current = false;
+                    }, 1000)
                 } catch(error){
-                    console.error(error);
-                } finally {
                     isLoadingMoreRef.current = false;
+                    console.error(error);
                 }
             }
         }
@@ -257,15 +263,7 @@ const RecommendProduct = () => {
                     {items.map(renderGridItem)}
                 </div>
             }
-            <div className="flex justify-center mt-32">
-                <Pagination 
-                    current={page} 
-                    onChange={(page) => setPage(page)} 
-                    defaultCurrent={1} 
-                    total={50} 
-                />
-            </div>
-            {/* <p className='text-center text-sm text-gray-400 my-12'>{t('---到底了---')}</p> */}
+            <p className='text-center text-sm text-gray-400 my-12'>{t('---到底了---')}</p>
         </section>
     );
 }
